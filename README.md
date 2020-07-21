@@ -1,2 +1,0 @@
-fedora_laptop
-wwwlll
