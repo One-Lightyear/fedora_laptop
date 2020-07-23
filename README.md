@@ -1,2 +1,2 @@
-fedora_laptop\n
-Basic files from my laptop for practices
+#fedora_laptop
+#Basic files from my laptop for practices
