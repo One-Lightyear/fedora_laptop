@@ -2,25 +2,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <inttypes.h>
-#include <errno.h>
-#include <string.h>
-
+#include <limits.h>
 
 int main(int argc, char **argv, char **envp)
-{
-	char i=atoi(argv[1]);
+{	
+	if(argc!=2)
+	{
+		printf("Wrong number of arguements\n");
+		exit(EXIT_FAILURE);
+	}
+
+	int i=atoi(argv[1]);
 	int j=0;
 	
 	printf("The binary of i = %d is : ",i);
 
 
-	for(j=7;j>=0;j--)
+	for(j=((sizeof(int)*CHAR_BIT)-1);j>=0;j--)
 	{
-		if((i&(1<<j))==0)
-			printf("0");
-		else
-			printf("1");
+		(i&(1<<j))?printf("1"):printf("0");
 	}
 	printf("\n");
 	return 0;
