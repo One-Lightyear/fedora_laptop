@@ -42,13 +42,16 @@ int main(int argc, char** argv)
 			if(i==2)
 			{
 				printf("Child process no. %d created eith pid = %d.\n",i,getpid());
+				for(int j=0;j<=10;j++)
+					printf("%d\n",j);
+			
 				exit(EXIT_FAILURE);
 			}
 			if(i==3)
 			{
 				printf("Child process no. %d created eith pid = %d.\n",i,getpid());
 			//	while(1);
-				pause();
+			//	pause();
 				exit(EXIT_SUCCESS);
 			}
 		}
